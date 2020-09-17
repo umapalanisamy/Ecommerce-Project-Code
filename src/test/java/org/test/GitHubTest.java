@@ -60,6 +60,14 @@ public class GitHubTest {
 				}
 			}
 		}
+		
+		System.out.println("\nDuplicate Product:\n========================== ");
+		for (Entry<String, Integer> entry : mp.entrySet()) {
+			if (entry.getValue() > 1) {
+				System.out.println("Duplicate produt Name = " + entry.getKey() + ", Count = " + entry.getValue());
+			}
+		}
+		
 		System.out.println("\nBefore Sort\n============");
 		for (Entry<String, Integer> entry : products.entrySet()) {
 			System.out.println("Product Name = " + entry.getKey() + ", Price = " + entry.getValue());
@@ -76,12 +84,7 @@ public class GitHubTest {
 		for (Entry<String, Integer> entry : list) {
 			System.out.println("product Name = " + entry.getKey() + ", Price = " + entry.getValue());
 		}
-		System.out.println("\nDuplicate Product:\n========================== ");
-		for (Entry<String, Integer> entry : mp.entrySet()) {
-			if (entry.getValue() > 1) {
-				System.out.println("Duplicate produt Name = " + entry.getKey() + ", Count = " + entry.getValue());
-			}
-		}
+		
 		// driver.quit();
 	}
 
